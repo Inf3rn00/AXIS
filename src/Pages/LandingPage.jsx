@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 import Hero from "../Components/Hero";
 const LandingPage = () => {
   return (
-    <div>
+    <div className="h-screen overflow-y-auto overscroll-none">
       <Hero />
       <Features />
       <Footer />

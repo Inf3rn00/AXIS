@@ -44,7 +44,7 @@ const Dashboard = () => {
  
 
   const StatCard = ({ title, value, Icon, change }) => (
-    <div className="group relative bg-gradient-to-br from-white to-gray-50 p-6 rounded-3xl border border-gray-200 hover:border-indigo-300 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100/50 hover:-translate-y-1">
+    <div className="group relative bg-gradient-to-br from-white to-gray-50 p-6 rounded-3xl border border-gray-200 hover:border-indigo-300 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100/50 hover:-translate-y-1 ">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-purple-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <div className="relative">
         <div className="flex items-center justify-between mb-4">

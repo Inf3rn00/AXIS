@@ -43,10 +43,10 @@ const Hero = () => {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-white/90">
+          {/* <div className="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-white/90">
             <span className="animate-pulse w-2 h-2 bg-green-400 rounded-full mr-2"></span>
             Business Analytics Platform
-          </div>
+          </div> */}
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-400">
@@ -92,7 +92,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/dashboard">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-500 hover:to-pink-500 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 border border-purple-500/30">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-500 hover:to-pink-500 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 cursor-pointer">
                 <span className="relative z-10 flex items-center">
                   Launch Dashboard
                   <svg
