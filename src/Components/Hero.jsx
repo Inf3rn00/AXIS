@@ -3,121 +3,71 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     setIsVisible(true);
-
-    const handleMouseMove = (e) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-
- 
-
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated Background */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(147, 51, 234, 0.3) 0%, transparent 50%)`,
-        }}
-      />
-
-      <div />
+    <section className="relative min-h-[90vh] flex items-center bg-[#fafafa] text-zinc-900 overflow-hidden font-sans border-b border-zinc-200">
+      {/* Grid Background - Softer */}
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{
+        backgroundImage: 'linear-gradient(#e4e4e7 1px, transparent 1px), linear-gradient(90deg, #e4e4e7 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+        opacity: 0.5
+      }}></div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div
-          className={`transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          {/* Badge */}
-          {/* <div className="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium text-white/90">
-            <span className="animate-pulse w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-            Business Analytics Platform
-          </div> */}
+      <div className="container mx-auto px-6 relative z-10">
+        <div className={`transition-all duration-1000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-400">
-            Central Hub
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-zinc-200 shadow-sm mb-8">
+            <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-[10px] font-mono-data font-bold uppercase tracking-widest text-zinc-600">
+              System Online // v2.1.0
+            </span>
+          </div>
+
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter uppercase leading-[0.9] text-zinc-900">
+            Central
+            <br />
+            <span className="text-zinc-400">Hub</span>
           </h1>
 
-          {/* Clear Value Proposition */}
-          <p className="text-xl md:text-2xl lg:text-3xl mb-4 text-gray-200 font-light leading-relaxed max-w-4xl mx-auto">
-            Your comprehensive
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold">
-              {" "}
-              business intelligence platform{" "}
-            </span>
-            for data-driven decisions
+          <p className="text-xl md:text-2xl mb-12 max-w-2xl font-light leading-relaxed text-zinc-600">
+            Enterprise-grade business intelligence.
+            <br />
+            Designed for clarity, precision, and performance.
           </p>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Track sales, monitor performance, analyze revenue, and manage your
-            business operations from one unified dashboard.
-          </p>
-
-          {/* Key Features Preview */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm">
-            {[
-              " Real-time Analytics",
-              " Revenue Tracking",
-              " Sales Monitoring",
-              " User Management",
-              " Activity Logs",
-              " Performance Metrics",
-            ].map((feature, index) => (
-              <span
-                key={feature}
-                className="px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full text-white/80 hover:bg-white/10 transition-colors cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {feature}
-              </span>
-            ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 w-fit">
             <Link to="/dashboard">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-xl hover:from-purple-500 hover:to-pink-500 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 cursor-pointer">
-                <span className="relative z-10 flex items-center">
-                  Launch Dashboard
-                  <svg
-                    className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+              <button className="px-10 py-5 bg-zinc-900 text-white font-bold text-sm uppercase hover:bg-blue-600 transition-colors shadow-lg font-mono-data tracking-wider">
+                Launch_Terminal
               </button>
             </Link>
+            <button className="px-10 py-5 bg-white text-zinc-900 border border-zinc-200 font-bold text-sm uppercase hover:bg-zinc-50 hover:border-zinc-300 transition-all font-mono-data tracking-wider shadow-sm">
+              Documentation
+            </button>
           </div>
+
+          <div className="mt-20 flex gap-12 font-mono-data text-[10px] text-zinc-400 uppercase tracking-widest border-t border-zinc-200 pt-8 w-full max-w-md">
+            <div>
+              <p className="font-bold text-zinc-900 mb-1">Architecture</p>
+              <p>React 18 / Node.js</p>
+            </div>
+            <div>
+              <p className="font-bold text-zinc-900 mb-1">Status</p>
+              <p className="text-green-600">● 99.9% Uptime</p>
+            </div>
+            <div>
+              <p className="font-bold text-zinc-900 mb-1">Latency</p>
+              <p>&lt; 24ms (Global)</p>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent" />
     </section>
   );
 };

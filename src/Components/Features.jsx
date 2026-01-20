@@ -1,115 +1,85 @@
 import { useState, useEffect } from "react";
+import { BarChart3, Wallet, TrendingUp, Users, FileText, Target } from "lucide-react";
 
 const Features = () => {
-  const [isInView, setIsInView] = useState(false);
 
   // Aligned with Hero section features
   const features = [
-    { 
-      title: "Real-time Analytics", 
-      description: "Monitor your business performance with live data updates and comprehensive insights that help you make informed decisions.", 
-      icon: "📊",
-      color: "from-blue-500 to-cyan-500"
+    {
+      title: "Real-time Analytics",
+      description: "Direct feed. 24ms Latency. Live data processing.",
+      icon: BarChart3,
+      id: "MX-001"
     },
-    { 
-      title: "Revenue Tracking", 
-      description: "Track your revenue streams, analyze financial trends, and optimize your income with detailed reporting and forecasting.", 
-      icon: "💰",
-      color: "from-green-500 to-emerald-500"
+    {
+      title: "Revenue Tracking",
+      description: "Financial stream analysis with step-line projection.",
+      icon: Wallet,
+      id: "MX-002"
     },
-    { 
-      title: "Sales Monitoring", 
-      description: "Keep track of your sales performance, conversion rates, and customer behavior to boost your business growth.", 
-      icon: "📈",
-      color: "from-purple-500 to-pink-500"
+    {
+      title: "Sales Monitoring",
+      description: "Conversion metrics. Cohort analysis. Retention grids.",
+      icon: TrendingUp,
+      id: "MX-003"
     },
-    { 
-      title: "User Management", 
-      description: "Manage your users, track engagement metrics, and understand your audience with comprehensive user analytics.", 
-      icon: "👥",
-      color: "from-orange-500 to-red-500"
+    {
+      title: "User Management",
+      description: "Role-based access control (RBAC). Audit logging.",
+      icon: Users,
+      id: "MX-004"
     },
-    { 
-      title: "Activity Logs", 
-      description: "Monitor all system activities, track changes, and maintain detailed audit trails for security and compliance.", 
-      icon: "📋",
-      color: "from-indigo-500 to-purple-500"
+    {
+      title: "Activity Logs",
+      description: "Immutable system logs. Security tracking. IP resolution.",
+      icon: FileText,
+      id: "MX-005"
     },
-    { 
-      title: "Performance Metrics", 
-      description: "Analyze key performance indicators, benchmark your progress, and identify areas for improvement and growth.", 
-      icon: "🎯",
-      color: "from-teal-500 to-blue-500"
+    {
+      title: "Performance Metrics",
+      description: "KPI benchmarks. Server loads. Throughput analysis.",
+      icon: Target,
+      id: "MX-006"
     },
   ];
 
-  useEffect(() => {
-    setIsInView(true);
-  }, []);
-
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-white border-b border-zinc-200 text-zinc-900">
+      <div className="container mx-auto px-6">
         {/* Header Section */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center px-4 py-2 mb-6 bg-purple-100 border border-purple-200 rounded-full text-sm font-medium text-purple-700">
-            <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-            Platform Features
+        <div className="mb-20 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-zinc-200 pb-8">
+          <div>
+            <span className="font-mono-data text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 mb-4 inline-block">
+              System Capabilities
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black mt-2 text-zinc-900 tracking-tight">
+              CORE MODULES
+            </h2>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Everything You Need
-          </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive business intelligence platform provides all the tools you need to 
-            <span className="text-purple-600 font-semibold"> monitor, analyze, and grow </span>
-            your business effectively
+          <p className="max-w-md text-zinc-500 text-sm leading-relaxed mb-1">
+            A comprehensive suite of tools designed to provide granular control over your business operations.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-zinc-200 border border-zinc-200">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transition-all duration-300"
-            >
-              {/* Icon Container */}
-              <div className="mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                  <span className="text-2xl">{feature.icon}</span>
+            <div key={index} className="bg-white p-10 hover:bg-zinc-50 transition-all group h-72 flex flex-col justify-between">
+              <div className="flex justify-between items-start">
+                <div className="p-3 bg-zinc-100 group-hover:bg-blue-600 transition-colors">
+                  <feature.icon className="w-6 h-6 text-zinc-900 group-hover:text-white transition-colors" strokeWidth={1.5} />
                 </div>
+                <span className="font-mono-data text-[10px] text-zinc-400 group-hover:text-zinc-500">{feature.id}</span>
               </div>
 
-              {/* Content */}
               <div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-lg font-bold uppercase tracking-wide mb-3 text-zinc-900">{feature.title}</h3>
+                <p className="text-xs font-mono-data text-zinc-500 leading-relaxed border-l-2 border-zinc-100 pl-4 group-hover:border-blue-600 transition-colors">
                   {feature.description}
                 </p>
-                
-                {/* Simple Learn More Link */}
-                <button className={`text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r ${feature.color}`}>
-                  Learn More →
-                </button>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA Section */}
-        <div className={`text-center mt-16 transition-all duration-1000 ${isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg transition-colors duration-200">
-              Start Your Free Trial
-            </button>
-            <button className="px-8 py-3 bg-white text-gray-700 font-semibold rounded-xl border border-gray-300 shadow-lg transition-colors duration-200">
-              Schedule Demo
-            </button>
-          </div>
         </div>
       </div>
     </section>
