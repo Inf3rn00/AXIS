@@ -8,7 +8,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="relative py-20 px-8 bg-white dark:bg-axis-dark-surface border-t border-slate-100 dark:border-slate-800">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-axis-light-secondary dark:text-axis-dark-secondary">
                 <div className="col-span-1 md:col-span-2">
                     <h3 className="font-serif text-2xl font-bold mb-6 text-axis-light-primary dark:text-axis-dark-primary">AXIS</h3>
