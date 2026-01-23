@@ -11,9 +11,12 @@ const Hero = () => {
     const navigate = useNavigate();
 
     return (
-        <header className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[90vh]">
+        <div>
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              <section className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[90vh]">
+            
             <div className="lg:col-span-7 flex flex-col justify-center mt-10">
+                
                 <h1 className="font-serif text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-axis-light-text dark:text-axis-dark-text">
                     The Operating System <br />
                     <span className="text-axis-light-secondary dark:text-axis-dark-secondary italic font-light">for Modern Business.</span>
@@ -98,7 +101,9 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
+        </div>
+      
     );
 };
 
