@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+html,
+body {
+  overscroll-behavior: none;
+  background-color: var(--color-axis-light-bg);
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: var(--color-axis-dark-bg);
+  }
+}
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Brighter, cleaner light mode */
+  --color-axis-light-bg: #f8fafc;
+  /* Slate-50 */
+  --color-axis-light-surface: #ffffff;
+  --color-axis-light-text: #0f172a;
+  /* Slate-900 */
+  --color-axis-light-secondary: #64748b;
+  /* Slate-500 */
+  --color-axis-light-primary: #0f172a;
+  /* Slate-900 */
+  --color-axis-light-accent: #2563eb;
+  /* Blue-600 */
+
+  /* Dark mode */
+  --color-axis-dark-bg: #0f172a;
+  /* Slate-900 */
+  --color-axis-dark-surface: #1e293b;
+  /* Slate-800 */
+  --color-axis-dark-text: #f8fafc;
+  /* Slate-50 */
+  --color-axis-dark-secondary: #94a3b8;
+  /* Slate-400 */
+  --color-axis-dark-primary: #f8fafc;
+  /* Slate-50 */
+  --color-axis-dark-accent: #3b82f6;
+  /* Blue-500 */
+}
