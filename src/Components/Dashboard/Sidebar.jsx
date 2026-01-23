@@ -42,7 +42,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                 <div className="px-6 h-16 flex items-center gap-3">
                     <div className="w-7 h-7 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center text-white shadow-sm shadow-blue-200 dark:shadow-none">
                         <span className="font-serif font-bold text-lg leading-none pt-0.5">A</span>
-                    </div>
+                    </div> 
                     <span className="font-serif font-bold text-lg tracking-tight text-slate-800 dark:text-white">AXIS</span>
                 </div>
             </Link>
