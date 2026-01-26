@@ -40,9 +40,10 @@ const TableRow = ({ title, status, date, amount }) => (
  */
 const LedgerPreview = () => {
     return (
-        <section id="ledger" className="py-24 px-6 relative overflow-hidden">
+        <section id="ledger" className="py-24 px-6 relative overflow-hidden ">
             {/* Background blobs */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50/50 dark:bg-blue-900/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
             <div className="max-w-6xl mx-auto text-center mb-16 relative z-10">
                 <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-axis-light-text dark:text-axis-dark-text">Global Operations Ledger</h2>

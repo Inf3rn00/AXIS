@@ -8,8 +8,10 @@ import { BarChart3, Layers, Globe } from 'lucide-react';
  */
 const Features = () => {
     return (
-        <section id="capabilities" className="py-24 px-6 md:px-16 bg-gray-50/50 dark:bg-gray-900/20">
+        <section id="capabilities" className="relative py-24 px-6 md:px-16 bg-gray-50/50 dark:bg-gray-900/20">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div className="max-w-7xl mx-auto">
+
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
                         <h2 className="font-serif text-4xl font-bold text-axis-light-text dark:text-axis-dark-text mb-4">The Index</h2>

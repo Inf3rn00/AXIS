@@ -7,6 +7,7 @@ import {
     Settings,
     ChevronDown,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 /**
  * SidebarItem component for individual navigation links in the sidebar.
@@ -37,13 +38,14 @@ const SidebarItem = ({ icon, label, active, onClick }) => (
 const Sidebar = ({ activeTab, setActiveTab }) => {
     return (
         <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-20 transition-colors duration-300">
-            <div className="px-6 h-16 flex items-center gap-3">
-                <div className="w-7 h-7 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center text-white shadow-sm shadow-blue-200 dark:shadow-none">
-                    <span className="font-serif font-bold text-lg leading-none pt-0.5">A</span>
+            <Link to="/">
+                <div className="px-6 h-16 flex items-center gap-3">
+                    <div className="w-7 h-7 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center text-white shadow-sm shadow-blue-200 dark:shadow-none">
+                        <span className="font-serif font-bold text-lg leading-none pt-0.5">A</span>
+                    </div> 
+                    <span className="font-serif font-bold text-lg tracking-tight text-slate-800 dark:text-white">AXIS</span>
                 </div>
-                <span className="font-serif font-bold text-lg tracking-tight text-slate-800 dark:text-white">AXIS</span>
-            </div>
-
+            </Link>
             <nav className="flex-1 px-3 py-6 space-y-0.5">
                 <div className="px-3 mb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 font-sans">Main</div>
                 <SidebarItem
@@ -92,7 +94,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                     <ChevronDown className="w-3 h-3 text-slate-400" />
                 </button>
             </div>
-        </aside>
+        </aside >
     );
 };
 
