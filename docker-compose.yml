@@ -3,11 +3,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: central-hub-postgres
+    container_name: axis-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: centralhub
+      POSTGRES_DB: axis
     ports:
       - "5432:5432"
     volumes:
@@ -15,13 +15,13 @@ services:
 
   backend:
     build: ./backend
-    container_name: central-hub-backend
+    container_name: axis-backend
     ports:
       - "5000:5000"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: centralhub
+      POSTGRES_DB: axis
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
     depends_on:
@@ -29,7 +29,7 @@ services:
 
   frontend:
     build: .
-    container_name: central-hub-frontend
+    container_name: axis-frontend
     ports:
       - "80:80"
     depends_on:

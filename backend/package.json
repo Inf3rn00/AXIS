@@ -1,7 +1,7 @@
 {
-    "name": "central-hub-backend",
+    "name": "axis-backend",
     "version": "1.0.0",
-    "description": "Backend for Central Hub",
+    "description": "Backend for Axis",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
