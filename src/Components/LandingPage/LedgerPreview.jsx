@@ -80,7 +80,7 @@ const LedgerPreview = () => {
                         </div>
                         <div className="mt-auto flex items-center gap-3 px-3 py-2 border-t border-slate-100 dark:border-slate-800 pt-4">
                             <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold">JD</div>
-                            <div className="text-xs font-medium text-slate-700 dark:text-slate-300">Jane Doe</div>
+                            <div className="text-xs font-medium text-slate-700 dark:text-slate-300">Joshua Dodo</div>
                         </div>
                     </div>
 
