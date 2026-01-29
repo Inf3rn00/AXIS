@@ -16,7 +16,7 @@ const LoginPage = () => {
         setTimeout(() => {
             setStep('success');
             setTimeout(() => {
-                navigate('/Dashboard');
+                navigate('/dashboard');
             }, 800);
         }, 1500);
     };
@@ -67,7 +67,7 @@ const LoginPage = () => {
                                     <label className="text-sm font-semibold text-axis-light-text dark:text-axis-dark-text">Email Address</label>
                                     <input
                                         type="email"
-                                        defaultValue="joshua.doo@axis-finance.com"
+                                        defaultValue="joshua.dodo@axis-finance.com"
                                         className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-axis-light-accent focus:border-transparent transition-all"
                                     />
                                 </div>

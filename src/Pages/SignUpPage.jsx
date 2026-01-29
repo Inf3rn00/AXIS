@@ -72,7 +72,7 @@ const SignUpPage = () => {
                                     <input
                                         required
                                         type="text"
-                                        placeholder="e.g. Joshua Doo"
+                                        placeholder="e.g. Joshua Dodo"
                                         className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-axis-light-accent focus:border-transparent transition-all"
                                     />
                                 </div>

@@ -7,35 +7,37 @@ import {
     Settings,
     ChevronDown,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 /**
  * SidebarItem component for individual navigation links in the sidebar.
  */
-const SidebarItem = ({ icon, label, active, onClick }) => (
-    <button
-        onClick={onClick}
-        className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${active
+const SidebarItem = ({ icon, label, to }) => (
+    <NavLink
+        to={to}
+        end={to === '/dashboard' || to === '/dashboard/overview'}
+        className={({ isActive }) => `w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive
             ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 shadow-sm'
             : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200'
             }`}
     >
-        <span className={`${active ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 group-hover:text-slate-600'}`}>
-            {icon}
-        </span>
-        {label}
-    </button>
+        {({ isActive }) => (
+            <>
+                <span className={`${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 group-hover:text-slate-600'}`}>
+                    {icon}
+                </span>
+                {label}
+            </>
+        )}
+    </NavLink>
 );
 
 /**
  * Sidebar component for the Dashboard.
- * Handles navigation between different dashboard views.
- * @param {Object} props - Component props
- * @param {string} props.activeTab - Currently selected tab ID
- * @param {Function} props.setActiveTab - Function to update the active tab
+ * Handles navigation between different dashboard views using routes.
  * @returns {JSX.Element} The Sidebar component.
  */
-const Sidebar = ({ activeTab, setActiveTab }) => {
+const Sidebar = () => {
     return (
         <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-20 transition-colors duration-300">
             <Link to="/">
@@ -51,34 +53,29 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                 <SidebarItem
                     icon={<LineChart className="w-4 h-4" />}
                     label="Overview"
-                    active={activeTab === 'overview'}
-                    onClick={() => setActiveTab('overview')}
+                    to="/dashboard/overview"
                 />
                 <SidebarItem
                     icon={<FileText className="w-4 h-4" />}
                     label="Ledger"
-                    active={activeTab === 'articles'}
-                    onClick={() => setActiveTab('articles')}
+                    to="/dashboard/ledger"
                 />
                 <SidebarItem
                     icon={<Users className="w-4 h-4" />}
                     label="Team"
-                    active={activeTab === 'authors'}
-                    onClick={() => setActiveTab('authors')}
+                    to="/dashboard/team"
                 />
 
                 <div className="px-3 mb-2 mt-8 text-[10px] font-bold tracking-widest text-slate-400 dark:text-slate-500 font-sans">System</div>
                 <SidebarItem
                     icon={<Activity className="w-4 h-4" />}
                     label="Activity"
-                    active={activeTab === 'notifications'}
-                    onClick={() => setActiveTab('notifications')}
+                    to="/dashboard/activity"
                 />
                 <SidebarItem
                     icon={<Settings className="w-4 h-4" />}
                     label="Settings"
-                    active={activeTab === 'settings'}
-                    onClick={() => setActiveTab('settings')}
+                    to="/dashboard/settings"
                 />
             </nav>
 
