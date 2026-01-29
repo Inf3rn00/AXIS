@@ -100,7 +100,7 @@ const LedgerPreview = () => {
                         {/* Recent Activity Table - Visual Only */}
                         <div className="flex-1 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col">
                             <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/30">
-                                <h3 className="font-semibold text-slate-800 dark:text-slate-200 text-sm uppercase tracking-wide">Recent Transactions</h3>
+                                <h3 className="font-semibold text-slate-800 dark:text-slate-200 text-sm tracking-wide">Recent Transactions</h3>
                                 <div className="p-1 rounded text-slate-400">
                                     <MoreHorizontal className="w-4 h-4" />
                                 </div>
@@ -109,10 +109,10 @@ const LedgerPreview = () => {
                                 <table className="w-full text-sm text-left">
                                     <thead className="bg-white dark:bg-slate-900 text-slate-500 font-medium border-b border-slate-100 dark:border-slate-800">
                                         <tr>
-                                            <th className="px-6 py-3 font-medium text-xs uppercase tracking-wider">Description</th>
-                                            <th className="px-6 py-3 font-medium text-xs uppercase tracking-wider">Status</th>
-                                            <th className="px-6 py-3 font-medium text-xs uppercase tracking-wider">Date</th>
-                                            <th className="px-6 py-3 text-right font-medium text-xs uppercase tracking-wider">Amount</th>
+                                            <th className="px-6 py-3 font-medium text-xs tracking-wider">Description</th>
+                                            <th className="px-6 py-3 font-medium text-xs tracking-wider">Status</th>
+                                            <th className="px-6 py-3 font-medium text-xs tracking-wider">Date</th>
+                                            <th className="px-6 py-3 text-right font-medium text-xs tracking-wider">Amount</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-slate-100 dark:divide-slate-800">

@@ -1,100 +1,9 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
-:root {
-  /* Fonts */
-  --font-ui: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-
-  /* Color Palette - Softer, Swiss-inspired */
-  --color-bg-base: #fafafa;
-  /* Very soft light gray/off-white */
-  --color-bg-surface: #ffffff;
-  /* Pure white for cards */
-  --color-bg-subtle: #f4f4f5;
-  /* Light zinc for accents */
-
-  --color-text-primary: #18181b;
-  /* Zinc 900 - Softer than pure black */
-  --color-text-secondary: #52525b;
-  /* Zinc 600 */
-  --color-text-muted: #a1a1aa;
-  /* Zinc 400 */
-
-  --color-border: #e4e4e7;
-  /* Zinc 200 - Soft border */
-  --color-border-strong: #d4d4d8;
-  /* Zinc 300 */
-
-  --color-accent: #3b82f6;
-  /* Blue 500 - Clear but not harsh */
-  --color-accent-soft: #eff6ff;
-  /* Blue 50 */
-}
-
-body {
-  font-family: var(--font-ui);
-  background-color: var(--color-bg-base);
-  color: var(--color-text-primary);
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Strict Enforcement of No Rounded Corners (Swiss Style) */
-* {
-  border-radius: 0px !important;
-}
-
-.font-mono-data {
-  font-family: var(--font-mono);
-}
-
-/* Button Resets & Styles */
-button {
-  border-radius: 0px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  font-size: 0.75rem;
-  /* 12px */
-}
-
-/* Scrollbar styling - softer */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
-  /* Zinc 300 */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa;
-  /* Zinc 400 */
-=======
-html,
-body {
-  overscroll-behavior: none;
-  background-color: var(--color-axis-light-bg);
-  height: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-
-  html,
-  body {
-    background-color: var(--color-axis-dark-bg);
-  }
-}
-
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   /* Brighter, cleaner light mode */
   --color-axis-light-bg: #f8fafc;
@@ -122,5 +31,58 @@ body {
   /* Slate-50 */
   --color-axis-dark-accent: #3b82f6;
   /* Blue-500 */
->>>>>>> 250e0a17a96d2dbf960b1c1bd91bfa4b2d162f85
+}
+
+/* Strict Enforcement of No Rounded Corners (Swiss Style) */
+* {
+  border-radius: 10px !important;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+  background-color: var(--color-axis-light-bg);
+  color: var(--color-axis-light-text);
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: var(--color-axis-dark-bg);
+    color: var(--color-axis-dark-text);
+  }
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+}
+
+/* Button Resets & Styles */
+button {
+  border-radius: 0px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  /* font-size: 0.75rem; 12px */
+}
+
+/* Scrollbar styling - softer */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  /* Zinc 300 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+  /* Zinc 400 */
 }

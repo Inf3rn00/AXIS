@@ -11,7 +11,7 @@ const Manifesto = () => {
             <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
             <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
                 <div>
-                    <span className="font-mono text-xs uppercase tracking-[0.3em] text-slate-400 mb-6 block">The AXIS Manifesto</span>
+                    <span className="font-mono text-xs tracking-[0.3em] text-slate-400 mb-6 block">The AXIS Manifesto</span>
                     <h2 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
                         "Clarity is the ultimate leverage."
                     </h2>

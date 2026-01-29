@@ -18,7 +18,7 @@ const Features = () => {
                         <p className="text-axis-light-secondary dark:text-axis-dark-secondary max-w-lg">Core capabilities designed for the modern enterprise.</p>
                     </div>
 
-                    <p className="font-mono text-xs uppercase tracking-widest text-axis-light-secondary dark:text-axis-dark-secondary pb-1 border-b border-gray-200 dark:border-gray-700">Capabilities & Features</p>
+                    <p className="font-mono text-xs tracking-widest text-axis-light-secondary dark:text-axis-dark-secondary pb-1 border-b border-gray-200 dark:border-gray-700">Capabilities & Features</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

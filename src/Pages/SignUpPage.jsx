@@ -72,7 +72,7 @@ const SignUpPage = () => {
                                     <input
                                         required
                                         type="text"
-                                        placeholder="e.g. Jane Doe"
+                                        placeholder="e.g. Joshua Doo"
                                         className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-axis-light-accent focus:border-transparent transition-all"
                                     />
                                 </div>
@@ -92,7 +92,7 @@ const SignUpPage = () => {
                                     <input
                                         required
                                         type="email"
-                                        placeholder="jane@company.com"
+                                        placeholder="joshua@company.com"
                                         className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-axis-light-accent focus:border-transparent transition-all"
                                     />
                                 </div>

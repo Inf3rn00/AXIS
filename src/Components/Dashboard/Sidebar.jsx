@@ -42,12 +42,12 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                 <div className="px-6 h-16 flex items-center gap-3">
                     <div className="w-7 h-7 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center text-white shadow-sm shadow-blue-200 dark:shadow-none">
                         <span className="font-serif font-bold text-lg leading-none pt-0.5">A</span>
-                    </div> 
+                    </div>
                     <span className="font-serif font-bold text-lg tracking-tight text-slate-800 dark:text-white">AXIS</span>
                 </div>
             </Link>
             <nav className="flex-1 px-3 py-6 space-y-0.5">
-                <div className="px-3 mb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 font-sans">Main</div>
+                <div className="px-3 mb-2 text-[10px] font-bold tracking-widest text-slate-400 dark:text-slate-500 font-sans">Main</div>
                 <SidebarItem
                     icon={<LineChart className="w-4 h-4" />}
                     label="Overview"
@@ -67,7 +67,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                     onClick={() => setActiveTab('authors')}
                 />
 
-                <div className="px-3 mb-2 mt-8 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 font-sans">System</div>
+                <div className="px-3 mb-2 mt-8 text-[10px] font-bold tracking-widest text-slate-400 dark:text-slate-500 font-sans">System</div>
                 <SidebarItem
                     icon={<Activity className="w-4 h-4" />}
                     label="Activity"
@@ -88,7 +88,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                         JD
                     </div>
                     <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium truncate text-slate-700 dark:text-slate-200">Jane Doe</div>
+                        <div className="text-sm font-medium truncate text-slate-700 dark:text-slate-200">Joshua Dodo</div>
                         <div className="text-[10px] text-slate-400 truncate">Workspace Admin</div>
                     </div>
                     <ChevronDown className="w-3 h-3 text-slate-400" />
